@@ -7,6 +7,22 @@ public class Car {
 
     private int year;
 
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
     public void move() {
         System.out.println("자동차가 움직입니다.");
     }
@@ -23,19 +39,19 @@ public class Car {
         return this.brand;
     }
 
-    public void setModel(String model) {
-        this.model = model;
+    public Car() {
+        // 기본 생성자
     }
 
-    public void setYear(int year) {
+    public Car(String brand, String model, int year) {
+        this.brand = brand;
+        this.model = model;
         this.year = year;
     }
-    public String getModel() {
-        return model;
-    }
 
-    public int getYear() {
-        return year;
+    public Car(String brand, String model) {
+        this.brand = brand;
+        this.model = model;
     }
 
     public static void main(String[] args) {
@@ -43,12 +59,11 @@ public class Car {
         Car myCar = new Car();
         myCar.setBrand("kia");
         myCar.setModel("K5");
-        myCar.setYear(3);
-
+        myCar.setYear(2023);
 
         System.out.println("브랜드: " + myCar.getBrand());
         System.out.println("모델: " + myCar.getModel());
-        System.out.println("연식: " + myCar.getYear());
+        System.out.println("연도: " + myCar.getYear());
 
         myCar.move();
         myCar.stop();
@@ -57,6 +72,7 @@ public class Car {
 
 
 }
+
 
 
 
