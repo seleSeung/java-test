@@ -73,5 +73,12 @@ public class Main {
             num2++;
         } while (num2< 3);
 
+        int[] arr = {1, 2, 3};
+        System.out.println(arr[0]); // 1
+        arr[1] = 10;
+        System.out.println(arr[1]); // 10
+
+
+
    }
 }
